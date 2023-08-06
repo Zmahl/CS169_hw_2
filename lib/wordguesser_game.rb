@@ -45,7 +45,7 @@ class WordGuesserGame
       end
       
       @letters_guessed[char] = 1
-      
+      return true
     else
       false
     end
