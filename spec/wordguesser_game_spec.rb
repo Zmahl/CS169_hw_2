@@ -9,7 +9,7 @@ describe WordGuesserGame do
     end
   end
 
-  describe 'new', :pending => true do
+  describe 'new' do
     it "takes a parameter and returns a WordGuesserGame object" do      
       @game = WordGuesserGame.new('glorp')
       expect(@game).to be_an_instance_of(WordGuesserGame)
@@ -19,17 +19,17 @@ describe WordGuesserGame do
     end
   end
 
-  describe 'guessing', :pending => true do
+  describe 'guessing' do
     context 'correctly' do
       before :each do
         @game = WordGuesserGame.new('garply')
         @valid = @game.guess('a')
       end
-      it 'changes correct guess list', :pending => true do
+      it 'changes correct guess list' do
         expect(@game.guesses).to eq('a')
         expect(@game.wrong_guesses).to eq('')
       end
-      it 'returns true', :pending => true do
+      it 'returns true' do
         expect(@valid).not_to be false
       end
     end
@@ -38,11 +38,11 @@ describe WordGuesserGame do
         @game = WordGuesserGame.new('garply')
         @valid = @game.guess('z')
       end
-      it 'changes wrong guess list', :pending => true do
+      it 'changes wrong guess list' do
         expect(@game.guesses).to eq('')
         expect(@game.wrong_guesses).to eq('z')
       end
-      it 'returns true', :pending => true do
+      it 'returns true' do
         expect(@valid).not_to be false
       end
     end
@@ -51,7 +51,7 @@ describe WordGuesserGame do
         @game = WordGuesserGame.new('garply')
         guess_several_letters(@game, 'aq')
       end
-      it 'does not change correct guess list', :pending => true do
+      it 'does not change correct guess list' do
         @game.guess('a')
         expect(@game.guesses).to eq('a')
       end
@@ -59,7 +59,7 @@ describe WordGuesserGame do
         @game.guess('q')
         expect(@game.wrong_guesses).to eq('q')
       end
-      it 'returns false', :pending => true do
+      it 'returns false' do
         expect(@game.guess('a')).to be false
         expect(@game.guess('q')).to be false
       end

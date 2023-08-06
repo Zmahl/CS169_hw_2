@@ -1,6 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/flash'
-require_relative './lib/wordguesser_game.rb'
+require_relative 'wordguesser_game.rb'
 
 class WordGuesserApp < Sinatra::Base
 
